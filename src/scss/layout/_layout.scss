@@ -17,7 +17,6 @@
   margin: 75px auto;
   padding: 10px;
   background-color: #fff;
-  box-shadow: 0 3px 20px rgba(0,0,0,0.15);
   &__inner{
     position: relative;
     overflow: hidden;
@@ -29,9 +28,12 @@
     font-family: 'Open Sans', sans-serif;
     color: #fff;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 35px;
     letter-spacing: 0.075em;
     background-color: #191919;
+    @media (max-width: 575px){
+      font-size: 14px;
+    }
     span{
       padding-left: 15px;
       color: #EB4622;
@@ -78,6 +80,9 @@
       color: #fff;
       line-height: 45px;
       letter-spacing: 0.04em;
+      @media (max-width: 575px){
+        font-size: 16px;
+      }
     }
     svg{
       position: absolute;
@@ -104,6 +109,9 @@
     font-size: 12px;
     padding: 5px 10px;
     border-radius: 0 10px 0 0;
+    @media (max-width: 767px){
+      width: 50%;
+    }
     &:before{
       height: 25px;
       width: 30px;
