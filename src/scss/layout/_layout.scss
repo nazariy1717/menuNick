@@ -9,19 +9,35 @@
     height: 100%;
     vertical-align: middle;
     padding: 0 15px;
+    @media (max-width: 575px){
+      padding: 0 10px;
+    }
   }
 }
 
 .iframe-widget{
-  max-width: 830px;
   margin: 75px auto;
-  padding: 10px;
   background-color: #fff;
   &__inner{
     position: relative;
     overflow: hidden;
-    height: 450px;
+    height: 980px;
+    max-width: 980px;
+    width: 100%;
+    margin: auto;
     background-color: #295629;
+    @media (max-width: 1010px){
+      height: 700px;
+      max-width: 700px;
+    }
+    @media (max-width: 767px){
+      height: 500px;
+      max-width: 500px;
+    }
+    @media (max-width: 575px){
+      height: 300px;
+      max-width: 100%;
+    }
   }
   &__title{
     display: flex;
@@ -52,6 +68,9 @@
   &.active{
     height: 300px;
     background-color: transparent;
+    @media (max-width: 575px){
+      height: 225px;
+    }
     .iframe-nav__title{
       span{
         opacity: 0;
@@ -63,12 +82,21 @@
 
     .iframe-nav-menu-1 {
       top: 45px;
+      @media (max-width: 575px){
+        top: 45px;
+      }
     }
     .iframe-nav-menu-2 {
       top: 130px;
+      @media (max-width: 575px){
+        top: 105px;
+      }
     }
     .iframe-nav-menu-3 {
       top: 215px;
+      @media (max-width: 575px){
+        top: 165px;
+      }
     }
   }
   &__title{
@@ -112,6 +140,10 @@
     @media (max-width: 767px){
       width: 50%;
     }
+    @media (max-width: 575px){
+      padding: 3px 5px;
+      font-size: 10px;
+    }
     &:before{
       height: 25px;
       width: 30px;
@@ -129,6 +161,9 @@
   &__list{
     padding: 15px 10px;
     height: 90px;
+    @media (max-width: 575px){
+      padding: 10px 5px;
+    }
   }
   &__item{
     display: inline-block;
@@ -143,12 +178,19 @@
     border-radius: 3px;
     text-align: center;
     font-weight: 400;
+    cursor: pointer;
     font-size: 14px;
     color: #fff;
     background-color: transparent;
-
+    transition: all 0.3s;
+    @media (max-width: 575px){
+      height: 25px;
+      font-size: 12px;
+    }
+    &:hover{
+      background-color: #fff;
+    }
   }
-  &__{}
 }
 
 .iframe-nav-menu-1{
@@ -168,6 +210,9 @@
     height: 150px;
     background-color: #EB4622;
   }
+  .iframe-nav-menu__btn:hover{
+    color: #EB4622;
+  }
 }
 
 .iframe-nav-menu-2{
@@ -185,6 +230,9 @@
   }
   .iframe-nav-menu__list{
     background-color: #B0351A;
+  }
+  .iframe-nav-menu__btn:hover{
+    color: #B0351A;
   }
 }
 
@@ -204,5 +252,8 @@
   }
   .iframe-nav-menu__list{
     background-color: #762311;
+  }
+  .iframe-nav-menu__btn:hover{
+    color: #762311;
   }
 }
