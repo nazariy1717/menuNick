@@ -8,6 +8,7 @@
 </head>
 <body>
 
+
 <main class="page-wrapper">
     <div class="page-wrapper__inner">
 
@@ -108,9 +109,11 @@
 </main>
 
 
-<!-- libs -->
-<script src="dist/js/libs/jquery-3.2.1.min.js"></script>
 <script>
+    document.querySelector('.iframe-nav__title').addEventListener('click', function () {
+        document.querySelector('.iframe-nav').classList.toggle('active');
+    })
 </script>
+iframe-nav
 </body>
 </html>

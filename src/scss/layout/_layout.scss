@@ -20,6 +20,7 @@
   box-shadow: 0 3px 20px rgba(0,0,0,0.15);
   &__inner{
     position: relative;
+    overflow: hidden;
     height: 450px;
     background-color: #295629;
   }
@@ -43,10 +44,31 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 300px;
-  overflow: hidden;
+  height: 45px;
   background-color: #191919;
-  transition: all 0.3s;
+  transition: all 1s;
+  &.active{
+    height: 300px;
+    background-color: transparent;
+    .iframe-nav__title{
+      span{
+        opacity: 0;
+      }
+      svg{
+        transform: rotate(180deg);
+      }
+    }
+
+    .iframe-nav-menu-1 {
+      top: 45px;
+    }
+    .iframe-nav-menu-2 {
+      top: 130px;
+    }
+    .iframe-nav-menu-3 {
+      top: 215px;
+    }
+  }
   &__title{
     cursor: pointer;
     position: relative;
@@ -63,12 +85,13 @@
       top: 8px;
       width: 30px;
       height: 30px;
+      transition: all 0.3s;
     }
   }
-  &__list{}
 }
 
 .iframe-nav-menu{
+  transition: all 1s;
   &__title{
     position: relative;
     width: 20%;
@@ -124,7 +147,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 45px;
+  top: 235px;
   bottom: 0;
   z-index: 1;
   .iframe-nav-menu__title{
@@ -143,7 +166,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 130px;
+  top: 260px;
   bottom: 0;
   z-index: 2;
   .iframe-nav-menu__title{
@@ -162,7 +185,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 215px;
+  top: 285px;
   bottom: 0;
   z-index: 3;
   .iframe-nav-menu__title{
