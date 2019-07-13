@@ -254,7 +254,8 @@
   position: absolute;
   left: 50%;
   top: calc(50% - 80px);
-  transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%) ;
+  //opacity: 0;
   width: 225px;
   height: 60px;
   padding: 0 10px;
@@ -264,6 +265,11 @@
   text-align: center;
   line-height: 60px;
   font-family: 'DINPro',sans-serif;
+  transition: all 0.35s;
+  &.active{
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+  }
   &:after{
     content: '';
     position: absolute;
