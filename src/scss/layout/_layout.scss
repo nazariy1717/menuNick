@@ -50,7 +50,7 @@
       height: 225px;
     }
     .iframe-nav__title{
-      span{
+      p{
         opacity: 0;
       }
       svg{
@@ -81,7 +81,7 @@
     cursor: pointer;
     position: relative;
     padding: 0 10px;
-    span{
+    p{
       font-size: 20px;
       color: #fff;
       line-height: 45px;
@@ -188,8 +188,9 @@
     height: 150px;
     background-color: #EB4622;
   }
-  .iframe-nav-menu__btn:hover{
+  .iframe-nav-menu__btn:hover, .iframe-nav-menu__btn.active{
     color: #EB4622;
+    background-color: #fff;
   }
 }
 
@@ -209,11 +210,11 @@
   .iframe-nav-menu__list{
     background-color: #B0351A;
   }
-  .iframe-nav-menu__btn:hover{
+  .iframe-nav-menu__btn:hover, .iframe-nav-menu__btn.active{
     color: #B0351A;
+    background-color: #fff;
   }
 }
-
 
 .iframe-nav-menu-3{
   position: absolute;
@@ -231,7 +232,47 @@
   .iframe-nav-menu__list{
     background-color: #762311;
   }
-  .iframe-nav-menu__btn:hover{
+  .iframe-nav-menu__btn:hover, .iframe-nav-menu__btn.active{
     color: #762311;
+    background-color: #fff;
+  }
+}
+
+
+.iframe-ball{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.iframe-tooltip{
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 80px);
+  transform: translate(-50%,-50%);
+  width: 225px;
+  height: 60px;
+  padding: 0 10px;
+  background-color: #000;
+  color: #fff;
+  font-size: 45px;
+  text-align: center;
+  line-height: 60px;
+  font-family: 'DINPro',sans-serif;
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 113px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 15px 0 0;
+    border-color: #000 transparent transparent transparent;
   }
 }
