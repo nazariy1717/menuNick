@@ -124,6 +124,8 @@ let golfIframe = {
 
         if(self.golfAnimation){
             self.golfAnimation.destroy();
+            $('.iframe-tooltip').hide();
+            $('.iframe-tooltip').removeClass('active');
         }
 
         self.golfAnimation = bodymovin.loadAnimation({
@@ -138,11 +140,9 @@ let golfIframe = {
 
         self.golfAnimation.addEventListener('complete',function(){
             console.log('end');
+            $('.iframe-tooltip').show();
+            $('.iframe-tooltip').addClass('active');
         });
-
-        // setTimeout(function(){
-        //     $('.iframe-tooltip').addClass('active');
-        // },1000);
 
     },
 
