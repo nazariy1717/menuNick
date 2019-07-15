@@ -231,73 +231,73 @@ let golfIframe = {
             'Headwind': {
                 'None': {
                     yards: 131,
-                    src: 'dist/js/json/D WS NIL.json'
+                    src: 'dist/js/json/PWedge/PW WS NIL.json'
                 },
                 '10 Mph': {
                     yards: 115,
-                    src: 'dist/js/json/D WS H10.json'
+                    src: 'dist/js/json/PWedge/PW WS H10.json'
                 },
                 '20 Mph': {
                     yards: 94,
-                    src: 'dist/js/json/D WS H20.json'
+                    src: 'dist/js/json/PWedge/PW WS H20.json'
                 },
                 '30 Mph': {
                     yards: 68,
-                    src: 'dist/js/json/D WS H30.json'
+                    src: 'dist/js/json/PWedge/PW WS H30.json'
                 }
             },
             'Tailwind': {
                 'None': {
                     yards: 131,
-                    src: 'dist/js/json/D WS NIL.json'
+                    src: 'dist/js/json/PWedge/PW WS NIL.json'
                 },
                 '10 Mph': {
                     yards: 143,
-                    src: 'dist/js/json/D WS T10.json'
+                    src: 'dist/js/json/PWedge/PW WS T10.json'
                 },
                 '20 Mph': {
                     yards: 152,
-                    src: 'dist/js/json/D WS T20.json'
+                    src: 'dist/js/json/PWedge/PW WS T20.json'
                 },
                 '30 Mph': {
                     yards: 157,
-                    src: 'dist/js/json/D WS T30.json'
+                    src: 'dist/js/json/PWedge/PW WS T30.json'
                 }
             },
             'L Cross': {
                 'None': {
                     yards: 131,
-                    src: 'dist/js/json/D WS NIL.json'
+                    src: 'dist/js/json/PWedge/PW WS NIL.json'
                 },
                 '10 Mph': {
                     yards: 131,
-                    src: 'dist/js/json/D WS L10.json'
+                    src: 'dist/js/json/PWedge/PW WS L10.json'
                 },
                 '20 Mph': {
                     yards: 131,
-                    src: 'dist/js/json/D WS L20.json'
+                    src: 'dist/js/json/PWedge/PW WS L20.json'
                 },
                 '30 Mph': {
                     yards: 131,
-                    src: 'dist/js/json/D WS L30.json'
+                    src: 'dist/js/json/PWedge/PW WS L30.json'
                 }
             },
             'R Cross': {
                 'None': {
                     yards: 131,
-                    src: 'dist/js/json/D WS NIL.json'
+                    src: 'dist/js/json/PWedge/PW WS NIL.json'
                 },
                 '10 Mph': {
                     yards: 131,
-                    src: 'dist/js/json/D WS L10.json'
+                    src: 'dist/js/json/PWedge/PW WS R10.json'
                 },
                 '20 Mph': {
                     yards: 131,
-                    src: 'dist/js/json/D WS L20.json'
+                    src: 'dist/js/json/PWedge/PW WS R20.json'
                 },
                 '30 Mph': {
                     yards: 131,
-                    src: 'dist/js/json/D WS L30.json'
+                    src: 'dist/js/json/PWedge/PW WS R30.json'
                 }
             },
         },
