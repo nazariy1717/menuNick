@@ -326,20 +326,11 @@ let golfIframe = {
         let directionParam = $('.js-btn-direction.active').text();
         let speedParam = $('.js-btn-speed.active').text();
 
-        console.log(clubParam);
-        console.log(directionParam);
-        console.log(speedParam);
-
         self.yards = self.dependencies[clubParam][directionParam][speedParam].yards;
         self.src = self.dependencies[clubParam][directionParam][speedParam].src;
         console.log(self.yards);
         console.log(self.src);
         $('.js-tooltip-yards').text(self.yards);
-        self.playAnimation();
-    },
-
-    playAnimation: function(){
-        let self = this;
 
         if(self.golfAnimation){
             self.golfAnimation.destroy();
@@ -355,6 +346,11 @@ let golfIframe = {
             prerender: true,
             path: self.src
         });
+    },
+
+    playAnimation: function(){
+        let self = this;
+
         self.golfAnimation.play();
 
         self.golfAnimation.addEventListener('complete',function(){
@@ -368,8 +364,11 @@ let golfIframe = {
     events: function () {
         let self = this;
 
-        document.querySelector('.iframe-nav__title').addEventListener('click', function () {
-            document.querySelector('.iframe-nav').classList.toggle('active');
+        $(document).on('click', '.iframe-nav__title', function () {
+            $('.iframe-nav').toggleClass('active');
+            if(!$('.iframe-nav').hasClass('active')){
+                self.playAnimation();
+            }
         });
 
         $(document).on('click', '.js-btn-club', function () {

@@ -49,6 +49,9 @@
     @media (max-width: 575px){
       height: 225px;
     }
+    .iframe-nav__title-play{
+      opacity: 1;
+    }
     .iframe-nav__title{
       p{
         opacity: 0;
@@ -99,6 +102,16 @@
       transition: all 0.3s;
     }
   }
+  &__title-play{
+    position: absolute;
+    right: 55px;
+    top: 8px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    opacity: 0;
+    transition: all 0.3s;
+  }
 }
 
 .iframe-nav-menu{
@@ -136,6 +149,7 @@
       z-index: -1;
     }
   }
+
   &__list{
     padding: 15px 10px;
     height: 90px;
