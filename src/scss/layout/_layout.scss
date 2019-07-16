@@ -57,6 +57,11 @@
     font-size: 18px;
     color: #fff;
     transition: all 0.5s;
+    @media (max-width: 575px){
+      max-width: 245px;
+      line-height: 16px;
+      font-size: 12px;
+    }
   }
 }
 
@@ -288,6 +293,10 @@
   height: 30px;
   border-radius: 50%;
   background-color: #fff;
+  @media (max-width: 575px){
+    width: 15px;
+    height: 15px;
+  }
 }
 
 .iframe-tooltip{
@@ -317,14 +326,13 @@
     line-height: 50px;
     font-family: 'DINPro',sans-serif;
     transition: all 0.35s;
-    @media (max-width: 767px){
-      left: calc(50% - 155px);
+    @media (max-width: 575px){
+      left: calc(50% - 85px);
       top: 50%;
-      width: 135px;
-      height: 35px;
+      width: 100px;
       padding: 0 5px;
-      font-size: 20px;
-      line-height: 35px;
+      font-size: 18px;
+      line-height: 30px;
     }
     &:after{
       content: '';
@@ -337,13 +345,11 @@
       border-style: solid;
       border-width: 7.5px 0 7.5px 40px;
       border-color: transparent transparent transparent #EB4622;
-      @media (max-width: 767px){
-        bottom: -30px;
-        left: 68px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 30px 10px 0 0;
+      @media (max-width: 575px){
+        right: -30px;
+        border-width: 5px 0 5px 30px;
+        transform: translateY(5px);
+
       }
     }
   }
@@ -356,17 +362,32 @@
     font-family: 'DINPro',sans-serif;
     font-weight: bold;
     font-size: 24px;
+    @media (max-width: 575px){
+      top: -35px;
+      font-size: 18px;
+    }
   }
   &__txt{
     position: absolute;
     left: 0;
     width: 330px;
     letter-spacing: 0.1em;
-    bottom: -90px;
+    bottom: -75px;
     color: #fff;
     font-size: 16px;
     text-transform: capitalize;
     line-height: 24px;
+    @media (max-width: 575px){
+      position: absolute;
+      left: 0;
+      width: 275px;
+      letter-spacing: 0.05em;
+      color: #fff;
+      text-transform: capitalize;
+      bottom: -50px;
+      font-size: 11px;
+      line-height: 14px;
+    }
   }
 }
 
@@ -375,4 +396,8 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  @media (max-width: 575px){
+    width: 50%;
+    height: 50%;
+  }
 }
