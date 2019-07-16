@@ -351,6 +351,9 @@ let golfIframe = {
     playAnimation: function(){
         let self = this;
 
+        $('.iframe-overlay').addClass('active');
+        $('.iframe-overlay').fadeOut();
+
         self.golfAnimation.play();
 
         self.golfAnimation.addEventListener('complete',function(){
