@@ -3,6 +3,7 @@ let golfIframe = {
     yards: 0,
     src: 0,
     golfAnimation: null,
+    loader: null,
 
     dependencies: {
         'Driver': {
@@ -333,6 +334,7 @@ let golfIframe = {
         $('.js-tooltip-yards').text(self.yards);
 
         if(self.golfAnimation){
+            self.loader.destroy();
             self.golfAnimation.destroy();
             $('.iframe-tooltip').hide();
             $('.iframe-tooltip').removeClass('active');
@@ -346,6 +348,15 @@ let golfIframe = {
             prerender: true,
             path: self.src
         });
+
+        self.loader = bodymovin.loadAnimation({
+            container: document.getElementById('iframe-loader'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            prerender: false,
+            path: 'dist/js/json/loader.json'
+        });
     },
 
     playAnimation: function(){
@@ -354,7 +365,14 @@ let golfIframe = {
         $('.iframe-overlay').addClass('active');
         $('.iframe-overlay').fadeOut();
 
-        self.golfAnimation.play();
+        $('#iframe-loader').fadeIn();
+        self.loader.play();
+
+        self.loader.addEventListener('complete',function(){
+            $('#iframe-loader').fadeOut();
+            self.golfAnimation.play();
+        });
+
 
         self.golfAnimation.addEventListener('complete',function(){
             console.log('end');
