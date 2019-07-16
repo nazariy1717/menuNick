@@ -2,6 +2,9 @@ let golfIframe = {
 
     yards: 0,
     src: 0,
+    yardText: 0,
+    yardCurve: 0,
+
     golfAnimation: null,
     loader: null,
 
@@ -10,72 +13,104 @@ let golfIframe = {
             'Headwind': {
                 'None': {
                     yards: 317,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/driver/D WS NIL.json'
                 },
                 '10 Mph': {
                     yards: 289,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/driver/D WS H10.json'
                 },
                 '20 Mph': {
                     yards: 262,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/driver/D WS H20.json'
                 },
                 '30 Mph': {
                     yards: 235,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/driver/D WS H30.json'
                 }
             },
             'Tailwind': {
                 'None': {
                     yards: 317,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/driver/D WS NIL.json'
                 },
                 '10 Mph': {
                     yards: 334,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/driver/D WS T10.json'
                 },
                 '20 Mph': {
                     yards: 354,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/driver/D WS T20.json'
                 },
                 '30 Mph': {
                     yards: 366,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/driver/D WS T30.json'
                 }
             },
             'L Cross': {
                 'None': {
                     yards: 317,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/driver/D WS NIL.json'
                 },
                 '10 Mph': {
-                    yards: 313,
+                    yards: 21,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/driver/D WS L10.json'
                 },
                 '20 Mph': {
-                    yards: 313,
+                    yards: 43,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/driver/D WS L20.json'
                 },
                 '30 Mph': {
-                    yards: 313,
+                    yards: 66,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/driver/D WS L30.json'
                 }
             },
             'R Cross': {
                 'None': {
                     yards: 317,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/driver/D WS NIL.json'
                 },
                 '10 Mph': {
-                    yards: 313,
+                    yards: 21,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/driver/D WS R10.json'
                 },
                 '20 Mph': {
-                    yards: 313,
+                    yards: 43,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/driver/D WS R20.json'
                 },
                 '30 Mph': {
-                    yards: 313,
+                    yards: 66,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/driver/D WS R30.json'
                 }
             },
@@ -84,72 +119,104 @@ let golfIframe = {
             'Headwind': {
                 'None': {
                     yards: 204,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/4Iron/4Iron WS NIL.json'
                 },
                 '10 Mph': {
                     yards: 188,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/4Iron/4Iron WS H10.json'
                 },
                 '20 Mph': {
                     yards: 168,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/4Iron/4Iron WS H20.json'
                 },
                 '30 Mph': {
                     yards: 144,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/4Iron/4Iron WS H30.json'
                 }
             },
             'Tailwind': {
                 'None': {
                     yards: 204,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/4Iron/4Iron WS NIL.json'
                 },
                 '10 Mph': {
                     yards: 215,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/4Iron/4Iron WS T10.json'
                 },
                 '20 Mph': {
                     yards: 221,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/4Iron/4Iron WS T20.json'
                 },
                 '30 Mph': {
                     yards: 223,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/4Iron/4Iron WS T30.json'
                 }
             },
             'L Cross': {
                 'None': {
                     yards: 204,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/4Iron/4Iron WS NIL.json'
                 },
                 '10 Mph': {
-                    yards: 204,
+                    yards: 18,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/4Iron/4Iron WS L10.json'
                 },
                 '20 Mph': {
-                    yards: 204,
+                    yards: 37,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/4Iron/4Iron WS L20.json'
                 },
                 '30 Mph': {
-                    yards: 204,
+                    yards: 57,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/4Iron/4Iron WS L30.json'
                 }
             },
             'R Cross': {
                 'None': {
                     yards: 204,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/4Iron/4Iron WS NIL.json'
                 },
                 '10 Mph': {
-                    yards: 204,
+                    yards: 18,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/4Iron/4Iron WS R10.json'
                 },
                 '20 Mph': {
-                    yards: 204,
+                    yards: 37,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/4Iron/4Iron WS R20.json'
                 },
                 '30 Mph': {
-                    yards: 204,
+                    yards: 57,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/4Iron/4Iron WS R30.json'
                 }
             },
@@ -158,72 +225,104 @@ let golfIframe = {
             'Headwind': {
                 'None': {
                     yards: 166,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/7Iron/7Iron WS NIL.json'
                 },
                 '10 Mph': {
                     yards: 149,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/7Iron/7Iron WS H10.json'
                 },
                 '20 Mph': {
                     yards: 128,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/7Iron/7Iron WS H20.json'
                 },
                 '30 Mph': {
                     yards: 102,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/7Iron/7Iron WS H30.json'
                 }
             },
             'Tailwind': {
                 'None': {
                     yards: 166,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/7Iron/7Iron WS NIL.json'
                 },
                 '10 Mph': {
                     yards: 179,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/7Iron/7Iron WS T10.json'
                 },
                 '20 Mph': {
                     yards: 187,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/7Iron/7Iron WS T20.json'
                 },
                 '30 Mph': {
                     yards: 191,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/7Iron/7Iron WS T30.json'
                 }
             },
             'L Cross': {
                 'None': {
                     yards: 166,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/7Iron/7Iron WS NIL.json'
                 },
                 '10 Mph': {
-                    yards: 166,
+                    yards: 17,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/7Iron/7Iron WS L10.json'
                 },
                 '20 Mph': {
-                    yards: 166,
+                    yards: 36,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/7Iron/7Iron WS L20.json'
                 },
                 '30 Mph': {
-                    yards: 166,
+                    yards: 55,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/7Iron/7Iron WS L30.json'
                 }
             },
             'R Cross': {
                 'None': {
                     yards: 166,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/7Iron/7Iron WS NIL.json'
                 },
                 '10 Mph': {
-                    yards: 166,
+                    yards: 17,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/7Iron/7Iron WS R10.json'
                 },
                 '20 Mph': {
-                    yards: 166,
+                    yards: 36,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/7Iron/7Iron WS R20.json'
                 },
                 '30 Mph': {
-                    yards: 166,
+                    yards: 55,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/7Iron/7Iron WS R30.json'
                 }
             },
@@ -232,72 +331,104 @@ let golfIframe = {
             'Headwind': {
                 'None': {
                     yards: 131,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/PWedge/PW WS NIL.json'
                 },
                 '10 Mph': {
                     yards: 115,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/PWedge/PW WS H10.json'
                 },
                 '20 Mph': {
                     yards: 94,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/PWedge/PW WS H20.json'
                 },
                 '30 Mph': {
                     yards: 68,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/PWedge/PW WS H30.json'
                 }
             },
             'Tailwind': {
                 'None': {
                     yards: 131,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/PWedge/PW WS NIL.json'
                 },
                 '10 Mph': {
                     yards: 143,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/PWedge/PW WS T10.json'
                 },
                 '20 Mph': {
                     yards: 152,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/PWedge/PW WS T20.json'
                 },
                 '30 Mph': {
                     yards: 157,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/PWedge/PW WS T30.json'
                 }
             },
             'L Cross': {
                 'None': {
                     yards: 131,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/PWedge/PW WS NIL.json'
                 },
                 '10 Mph': {
-                    yards: 131,
+                    yards: 16,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/PWedge/PW WS L10.json'
                 },
                 '20 Mph': {
-                    yards: 131,
+                    yards: 32,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/PWedge/PW WS L20.json'
                 },
                 '30 Mph': {
-                    yards: 131,
+                    yards: 50,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/PWedge/PW WS L30.json'
                 }
             },
             'R Cross': {
                 'None': {
                     yards: 131,
+                    yardText: 'yards',
+                    curveText: '',
                     src: 'dist/js/json/PWedge/PW WS NIL.json'
                 },
                 '10 Mph': {
-                    yards: 131,
+                    yards: 16,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/PWedge/PW WS R10.json'
                 },
                 '20 Mph': {
-                    yards: 131,
+                    yards: 32,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/PWedge/PW WS R20.json'
                 },
                 '30 Mph': {
-                    yards: 131,
+                    yards: 50,
+                    yardText: 'yard',
+                    curveText: 'curve',
                     src: 'dist/js/json/PWedge/PW WS R30.json'
                 }
             },
@@ -327,11 +458,18 @@ let golfIframe = {
         let directionParam = $('.js-btn-direction.active').text();
         let speedParam = $('.js-btn-speed.active').text();
 
-        self.yards = self.dependencies[clubParam][directionParam][speedParam].yards;
         self.src = self.dependencies[clubParam][directionParam][speedParam].src;
-        console.log(self.yards);
+        self.yardsCount = self.dependencies[clubParam][directionParam][speedParam].yards;
+        self.yardText = self.dependencies[clubParam][directionParam][speedParam].yardText;
+        self.yardCurve = self.dependencies[clubParam][directionParam][speedParam].curveText;
+
         console.log(self.src);
-        $('.js-tooltip-yards').text(self.yards);
+        console.log(self.yardsCount);
+        console.log(self.yardText);
+
+        $('.js-tooltip-yards-count').text(self.yardsCount);
+        $('.js-tooltip-yards-text').text(self.yardText);
+        $('.js-tooltip-yards-curve').text(self.yardCurve);
 
         if(self.golfAnimation){
             self.loader.destroy();
@@ -361,6 +499,12 @@ let golfIframe = {
 
     playAnimation: function(){
         let self = this;
+
+        ga('send', 'event', {
+            eventCategory: 'play',
+            eventAction: 'play',
+            eventLabel: 'play'
+        });
 
         $('.iframe-overlay').addClass('active');
         $('.iframe-overlay').fadeOut();

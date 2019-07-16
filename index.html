@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>index</title>
     <link href="dist/css/build.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143936211-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-143936211-1');
+    </script>
 </head>
 <body>
 
@@ -32,9 +41,16 @@
         <div id="iframe-loader"></div>
         <div class="iframe-ball"></div>
         <div class="iframe-tooltip">
-            <span class="iframe-tooltip__title">Total</span>
-            <div class="iframe-tooltip__tooltip"><span class="js-tooltip-yards"></span> Yards</div>
-            <p class="iframe-tooltip__txt">Wind is a large factor ipsum dolore, see the effects ipsum dolore et lore te sum iplore eldor se best course.</p>
+            <div class="iframe-tooltip__tooltip">
+                <span class="iframe-tooltip__title">Total</span>
+
+                <span class="js-tooltip-yards-count"></span>
+                <span class="js-tooltip-yards-text"></span>
+                <span class="js-tooltip-yards-curve"></span>
+
+                <p class="iframe-tooltip__txt">Wind is a large factor ipsum dolore, see the effects ipsum dolore et lore te sum iplore eldor se best course.</p>
+
+            </div>
         </div>
 
         <nav class="iframe-nav active">
